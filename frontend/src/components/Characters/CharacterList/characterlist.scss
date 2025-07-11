@@ -1,0 +1,20 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.loading {
+  color: #02afc5;
+}
+.logoutButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #02afc5;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}

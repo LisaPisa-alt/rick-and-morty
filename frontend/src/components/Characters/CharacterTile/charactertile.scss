@@ -1,0 +1,38 @@
+.tile {
+  border: 2px solid #02afc5;
+  border-radius: 8px;
+  padding: 30px;
+  height: fit-content;
+  width: 250px;
+  overflow: hidden;
+}
+.name {
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.buttons {
+  background: linear-gradient(145deg, #02afc5, #00e1ff);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.details {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+}

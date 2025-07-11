@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.imageHeader {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.form {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #02afc5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+
+  &-login {
+    background-color: #1f1f1f;
+  }
+}
+
+.input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #02afc5;
+  background-color: #101010;
+  color: #fff;
+  font-size: 16px;
+}
+
+.redirectText {
+  margin-top: 20px;
+  color: #02afc5;
+  font-size: 16px;
+}
+
+.redirectLink {
+  color: #02afc5;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.submitButton {
+  background-color: #02afc5;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
