@@ -17,7 +17,7 @@ A full stack application built with **React**, **Express**, and **Prisma**, inte
 
 ### 1. Clone the Repository
 
-    git clone https://github.com/LisaPisa-alt/rick-and-morty.git  
+    git clone https://github.com/LisaPisa-alt/rick-and-morty.git
     cd rick-and-morty
 
 ### 2. Install Dependencies
@@ -28,12 +28,21 @@ A full stack application built with **React**, **Express**, and **Prisma**, inte
     cd backend
     `npm install`
 
-### 3. Set up Prisma
+### 3. Set Environment Variables
 
-    npx prisma generate # Generate Prisma client
-    npx prisma migrate dev # Run migrations (creates DB tables)
+Before running Prisma commands or starting the backend, you must define environment variables, or Prisma will fail.
 
-### 4. Run the application locally
+Prisma will not run correctly without DATABASE_URL defined!
+
+### 4. Set up Prisma
+
+    cd backend
+    npx prisma generate
+    npx prisma migrate dev
+
+You only need to run `npx prisma migrate dev --name` init the first time you set up the DB or when new migrations are added. If you're just syncing schema changes locally without keeping migration history, you can use `npx prisma db push` instead.
+
+### 5. Run the application locally
 
     cd backend
     `node server`
