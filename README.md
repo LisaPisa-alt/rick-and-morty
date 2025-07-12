@@ -22,11 +22,11 @@ cd rick-and-morty
 
 ### 2. Install Dependencies
 
-cd frontend
-`npm install`
+    cd frontend
+    `npm install`
 
-cd backend
-`npm install`
+    cd backend
+    `npm install`
 
 ### 3. Set up Prisma
 
