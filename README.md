@@ -2,6 +2,13 @@
 
 A full stack application built with **React**, **Express**, and **Prisma**, interacting with the [Rick & Morty API](https://rickandmortyapi.com).
 
+## Live Deployment
+
+- **Frontend: [rick-and-morty-frontend.onrender.com](https://rick-and-morty-frontend.onrender.com)
+- **Backend: [rick-and-morty-backend.onrender.com](https://rick-and-morty-backend-eiq7.onrender.com)
+
+On Render free tier, backend storage is not persistent — SQLite data will reset on redeploys.
+
 ## Features
 
 - **Secure Authentication**: Only authenticated users can access the app.
