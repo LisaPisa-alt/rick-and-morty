@@ -57,21 +57,6 @@ export const fetchCharactersFromCache = async (page) => {
   return { characters, info };
 };
 
-export const fetchFavorites = async (username) => {
-  const user = await prisma.user.findUnique({
-    where: { username },
-    include: {
-      favorites: {
-        select: {
-          characterId: true,
-        },
-      },
-    },
-  });
-  if (!user) throw new Error("User not found");
-  return user.favorites.map((favorite) => favorite.characterId);
-};
-
 export const addFavorite = async (username, characterId) => {
   const user = await prisma.user.findUnique({
     where: { username: username.toLowerCase() },

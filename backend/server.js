@@ -7,7 +7,6 @@ import {
   addFavoriteCharacter,
   deleteFavoriteCharacter,
   getCharacters,
-  getFavorites,
 } from "./controllers/characterController.js";
 import { authenticate } from "./middleware/auth.js";
 dotenv.config();
@@ -23,7 +22,6 @@ app.post("/signup", signUpUser);
 app.post("/login", loginUser);
 
 app.get("/characters", authenticate, getCharacters);
-app.get("/favorites", authenticate, getFavorites);
 app.post("/favorites/:characterId", authenticate, addFavoriteCharacter);
 app.delete("/favorites/:characterId", authenticate, deleteFavoriteCharacter);
 
