@@ -12,8 +12,8 @@ A full stack application built with **React**, **Express**, and **Prisma**, inte
 
 ## Project Structure
 
-/frontend → React application (UI)  
-/backend → Express server (API, DB, Auth)
+    /frontend → React application (UI)
+    /backend → Express server (API, DB, Auth)
 
 ### 1. Clone the Repository
 
@@ -30,18 +30,18 @@ cd rick-and-morty
 
 ### 3. Set up Prisma
 
-npx prisma generate # Generate Prisma client
-npx prisma migrate dev # Run migrations (creates DB tables)
+    npx prisma generate # Generate Prisma client
+    npx prisma migrate dev # Run migrations (creates DB tables)
 
 ### 4. Run the application locally
 
-cd backend  
-`node server`
+    cd backend
+    `node server`
 
 Runs on: http://localhost:5000
 
-cd frontend  
-`npm start`
+    cd frontend
+    `npm start`
 
 Runs on: http://localhost:3000
 
