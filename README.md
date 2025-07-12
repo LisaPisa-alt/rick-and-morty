@@ -17,8 +17,8 @@ A full stack application built with **React**, **Express**, and **Prisma**, inte
 
 ### 1. Clone the Repository
 
-git clone https://github.com/LisaPisa-alt/rick-and-morty.git  
-cd rick-and-morty
+    git clone https://github.com/LisaPisa-alt/rick-and-morty.git  
+    cd rick-and-morty
 
 ### 2. Install Dependencies
 
