@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Getting Started with The Rick and Morty Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full stack application built with **React**, **Express**, and **Prisma**, interacting with the [Rick & Morty API](https://rickandmortyapi.com).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Secure Authentication**: Only authenticated users can access the app.
+- **Character Listing**: Browse all Rick & Morty characters.
+- **Favorites System**: Mark/unmark characters as favorites per user.
+- **Character Details**: View more information about each character.
+- Fallback mode if Rick & Morty API is down.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+/frontend → React application (UI)
+/backend → Express server (API, DB, Auth)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone the Repository
 
-### `npm test`
+git clone https://github.com/your-username/rick-and-morty-app.git
+cd rick-and-morty
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Install Dependencies
 
-### `npm run build`
+cd frontend
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd backend
+`npm install`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Set up Prisma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npx prisma generate # Generate Prisma client
+npx prisma migrate dev # Run migrations (creates DB tables)
 
-### `npm run eject`
+### 4. Run the application locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cd backend
+`node server`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs on: http://localhost:5000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cd frontend
+`npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Runs on: http://localhost:3000
 
-## Learn More
+## Potential Enhancements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here are some additional improvements to take the project to production-ready level:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ✅ Testing
 
-### Code Splitting
+- **Frontend Testing**
+  - Use [Jest](https://jestjs.io/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit and integration tests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Backend Testing**
+  - Use [Jest](https://jestjs.io/) for unit and integration tests.
 
-### Analyzing the Bundle Size
+### 🧭 Observability & Monitoring
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Logging**
+  - Use a structured logger for backend logs.
+  - Send logs to centralized services.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Error Tracking**
+  - Integrate [Sentry](https://sentry.io/)(or similar) on both frontend and backend to capture runtime errors and stack traces.

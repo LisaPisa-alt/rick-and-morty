@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import fallBackImage from "../../../images/morty-no-image-found.png";
 import "./charactertile.scss";
 
 const CharacterTile = ({ character, isFavorite, handleFavorites }) => {
@@ -17,22 +16,14 @@ const CharacterTile = ({ character, isFavorite, handleFavorites }) => {
 
   return (
     <div className="tile">
-      <img
-        className="image"
-        src={image}
-        alt={name}
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = fallBackImage;
-        }}
-      />
+      <img className="image" src={image} alt={name} />
       <h3 className="name">{name}</h3>
       <div className="buttons-container">
-        <button className="buttons" onClick={handleFavorites}>
+        <button className="button button-favorite" onClick={handleFavorites}>
           {isFavorite ? "Remove from Favorite" : "Add to Favorite"}
         </button>
         <button
-          className="buttons"
+          className="button button-details"
           onClick={() => {
             setExpanded(!expanded);
           }}
